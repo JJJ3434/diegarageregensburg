@@ -1,1 +1,366 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lebenslauf Johannes Janker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            max-width: 1300px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .wrapper div {
+            border: 2px solid rgb(233 171 88);
+            border-radius: 5px;
+            background-color: rgb(233 171 88 / 50%);
+            padding: 1em;
+            color: #d9480f;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+        @media (min-width >=300px) {
+            p {
+                color: blue;
+            }
+        }
+
+        p {
+            color: red;
+        }
+
+        .main-element {
+            width: 33%;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .footer2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header-element {
+            width: 33%;
+        }
+
+        .contact {
+            display: grid;
+        }
+
+        .contact-form {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .contact-background {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        em {
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Die Garage - Fitness in der Altstadt</h1>
+        </div>
+
+        <div class="header">
+
+            <div class="header-element">
+                <img src="bene_garage.webp" alt="">
+            </div>
+            <div class="header-element">
+
+                <p>
+                    Du hast Bock auf Training direkt um die Ecke in der Regensburger Altstadt? Angeleitet von
+                    sympathischen
+                    und top ausgebildetetn Coaches? Dann bist du bei uns richtig! Mein Name ist <em>Benjamin Bierl</em>
+                    und
+                    ich bin
+                    dein
+                </p>
+                <p>
+                    Coach im Altstadt-Gym <em>Die Garage</em>.
+                    Ich biete derzeit angeleitetes <em>Gruppentraining</em> sowie <em>Personaltraining</em> in meinem
+                    Micro-Gym an. Auch <em>Open
+                        Gym</em> Zeiten werden angeboten. Die Kurse sind jeweils auf 10 Teilnehmer begrenzt.
+                    Bei uns macht Training wieder Spaß!
+                </p>
+                <p>
+                    Melde dich hier bei mir:
+                </p>
+                <button>Unverbindliche Anfrage</button>
+            </div>
+            <div class="header-element">
+                <img src="logo_garage.webp" alt="">
+            </div>
+
+        </div>
+        <div class="main">
+            <div class="main-element">
+                <h2>Training</h2>
+                <p>
+                    Egal wie sportlich oder wie fit du bist, bei uns findest du deinen Platz um zu wachsen - physisch,
+                    aber
+                    auch mental. Gemeinsam arbeiten wir daran, dich auf ein höheres Fitnesslevel zu bringen und dir den
+                    Spaß
+                    an der Bewegung zu zeigen. Bei uns erwartet dich eine gleichgesinnte, diverse Community mit
+                    Mitgliedern
+                    aus allen Altersgruppen.
+                </p>
+
+                <p>
+                    Das Training besteht dabei aus Elementen der Funktionalen Fitness und bereitet dich auf die
+                    Herausforderungen des Alltags vor.
+
+                </p>
+                <p>
+                    Ziel des abwechslungsreichen Trainings ist es, Kraft aufzubauen, Beweglichkeit, Ausdauer und
+                    Belastungsfähigkeit zu verbessern. Wir trainieren in unserer Halle in der Deischgasse. Manchmal aber
+                    auch outdoor.
+                </p>
+                <img src="garage_halle.webp" alt="">
+            </div>
+            <div class="main-element">
+                <h2>Kurszeiten</h2>
+
+                <h3>Gruppentraining</h3>
+
+
+
+                <details>
+                    <summary>Montag: 5 Einheiten</summary>
+                    <ul>
+                        <li>8:45 - 10:00 </li>
+                        <li>16:15 - 17:30 </li>
+                        <li>17:30 - 18:45 </li>
+                        <li>18:45 - 20:00 </li>
+                        <li>20:00 - 21:15 </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Dienstag: 4 Einheiten</summary>
+                    <ul>
+                        <li>8:45 - 10:00 </li>
+                        <li>16:15 - 17:30 </li>
+                        <li>17:30 - 18:45 </li>
+                        <li>18:45 - 20:00 </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Mittwoch: 3 Einheiten</summary>
+                    <ul>
+                        <li>8:45 - 10:00 </li>
+                        <li>17:30 - 18:45 </li>
+                        <li>18:45 - 20:00 </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Donnerstag: 5 Einheiten</summary>
+                    <ul>
+                        <li>7:00 - 8:00</li>
+                        <li>8:45 - 10:00 </li>
+                        <li>17:30 - 18:45 </li>
+                        <li>18:45 - 20:00 </li>
+                        <li>20:00 - 21:15 </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Freitag: 3 Einheiten</summary>
+                    <ul>
+                        <li>8:45 - 10:00 </li>
+                        <li>16:15 - 17:30 </li>
+                        <li>17:30 - 18:45 </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Samstag: 1 Einheit</summary>
+                    <ul>
+                        <li>10:00 - 11:15 </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Sonntag: 2 Einheiten</summary>
+                    <ul>
+                        <li>17:00 - 18:15 </li>
+                        <li>18:00 - 19:15 </li>
+                    </ul>
+                </details>
+
+                <h3>Open Gym</h3>
+                <ul>
+                    Dienstag:
+                    <li>20:00 - 21:15 </li>
+                    Mittwoch:
+                    <li>16:15 - 17:30 </li>
+                    Freitag:
+                    <li>18:45 - 20:00 </li>
+                    Samstag:
+                    <li>9:00 - 10:00 </li>
+                </ul>
+
+                <h3>Yoga Power</h3>
+                Mittwoch:
+                <ul>
+                    <li>9:00 - 10:00 </li>
+                </ul>
+
+
+                <h3> Outdoor Training</h3>
+                Im Sommer jeden Samstag um 10:00 Uhr.
+                Kostenlos und bei jedem Wetter!
+                <p>
+
+                    Kurszeiten richten sich nach den Bedürfnissen der Mitglieder und können dementsprechend angepasst
+                    werden.
+
+                </p>
+            </div>
+            <div class="main-element">
+                <h2>Preise</h2>
+                <h3>Gruppentraining</h3>
+                <ul>
+                    <li>Training im Gym in der Altstadt</li>
+                    <li> Open Gym in jedem Vertrag inklusive</li>
+                    <li> Online-Training inklusive (wenn angeboten)</li>
+                    <li> Laufzeit: unbegrenzt </li>
+                    <li><em>1 Monat Kündigungsfrist</em> </li>
+                </ul>
+
+                <ul>
+                    <li>9 x / Monat: 89 € pro Monat</li>
+                    <li>13x / Monat: 115 € pro Monat</li>
+                    <li>30x / Monat: 149 € pro Monat</li>
+                    <li> 10er-Karte: 150€</li>
+                    <li>Drop in: 20 €</li>
+                </ul>
+                <h3>Personal Coaching</h3>
+                <ul>
+                    <li> 100€ / 60 Minuten</li>
+                </ul>
+
+
+
+
+                <img src="garage_outdoor.webp" alt="">
+            </div>
+        </div>
+        <div>
+            <img src="gruppe_outdoor.webp" alt="">
+        </div>
+        <div class="contact">
+            <div class="contact-background">
+                <img src="bene_full.webp" alt="">
+            </div>
+
+            <div class="contact-form">
+
+                <div class="contact-elment">Name</div>
+                <div class="contact-elment"><input></div>
+                <div class="contact-elment">EMail Adresse</div>
+                <div class="contact-elment"><input></div>
+                <div class="contact-elment">Nachricht</div>
+                <div class="contact-elment">
+
+                    <textarea>Hallo Bene,
+ich möchte fitter werden und mich für ein unverbindliches Probetraining in der Garage anmelden!
+Übernächste Woche habe ich dafür
+ - Monatag 06:00
+ - Dienstag 10:00
+ zeit. 
+            </textarea>
+                </div>
+                <div class="contact-elment"><button>Absenden</button></div>
+            </div>
+
+        </div>
+
+        <div class="maps">
+            <img src="osm.webp" alt="">
+        </div>
+
+        <div class="footer">
+            <div class="footer-element">
+                <h3>Anschrift</h3>
+                Die Garage Regensburg
+                Deischgasse 1
+                93047 Regensburg
+
+                <h3>Inhaber</h3>
+                Benjamin Bierl
+                Deischgasse 4
+                93047 Regensburg
+            </div>
+            <div class="footer-element">
+                <h3>E-Mail</h3>
+                bene.bierl@gmail.com
+
+                <h3>Instagram</h3>
+                @derfittebene
+
+                Die Garage Regensburg
+
+                <h3>Telefon</h3>
+                +49 15158895108
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="footer2-element">Impressunm</div>
+            <div class="footer2-element">Datenschutz</div>
+            <div class="footer2-element">AGBs</div>
+            <div class="footer2-element">Startseite</div>
+        </div>
+    </div>
+</body>
+
+
+</html>
