@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Lebenslauf Johannes Janker</title>
     <style>
         * {
@@ -15,12 +16,12 @@
             margin: 0 auto;
         }
 
-        .wrapper div {
-            border: 2px solid rgb(233 171 88);
+        .wrapper>div {
+            border: 2px solid rgb(255, 255, 255);
             border-radius: 5px;
-            background-color: rgb(233 171 88 / 50%);
+            background-color: rgb(0, 0, 0);
             padding: 1em;
-            color: #d9480f;
+            color: #dddddd;
         }
 
         .wrapper {
@@ -30,25 +31,19 @@
         }
 
         .main {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-wrap: wrap;
-
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
-        @media (min-width >=300px) {
-            p {
-                color: blue;
-            }
+        .main>div {
+            padding: 15px;
+            margin: 15px;
+            border: 2px solid white;
+            border-radius: 5px;
         }
 
-        p {
-            color: red;
-        }
-
-        .main-element {
-            width: 33%;
+        .main>div:has(img) {
+            border: none;
         }
 
         .footer {
@@ -57,18 +52,13 @@
             justify-content: space-around;
         }
 
+        .footer-element {
+            width: 48%;
+        }
+
         .footer2 {
             display: flex;
             flex-direction: row;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .header-element {
-            width: 33%;
         }
 
         .contact {
@@ -87,6 +77,7 @@
 
         img {
             width: 100%;
+            border-radius: 5px;
         }
 
         em {
@@ -98,8 +89,113 @@
             display: flex;
             justify-content: space-around;
         }
+
+        .footer2-element {
+            margin: 10px;
+        }
+
+        .main-bene {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .main-intro {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .main-logo {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .main-training {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .main-halle {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .main-zeit {
+            grid-column: 3;
+            grid-row: 2/4;
+        }
+
+        .main-outdoor {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .main-preis {
+            grid-column: 2;
+            grid-row: 3;
+        }
     </style>
 
+
+    <!-- 2 cols  -->
+    <style media="(min-width: 601px) and (max-width: 900px)">
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .main-bene {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .main-intro {
+            grid-column: 2;
+            grid-row: 1;
+            
+        }
+
+        .main-logo {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .main-training {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .main-halle {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .main-zeit {
+            grid-column: 2;
+            grid-row: 3/5;
+        }
+
+        .main-outdoor {
+            visibility: hidden;
+        }
+
+        .main-preis {
+            grid-column: 1;
+            grid-row: 4;
+        }
+    </style>
+
+    <!-- 1 col  -->
+    <style media="(max-width: 600px)">
+        .main {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .main >div {
+            grid-column: auto;
+            grid-row: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,12 +204,12 @@
             <h1>Die Garage - Fitness in der Altstadt</h1>
         </div>
 
-        <div class="header">
+        <div class="main">
 
-            <div class="header-element">
+            <div class="main-bene">
                 <img src="bene_garage.webp" alt="">
             </div>
-            <div class="header-element">
+            <div class="main-intro">
 
                 <p>
                     Du hast Bock auf Training direkt um die Ecke in der Regensburger Altstadt? Angeleitet von
@@ -135,13 +231,11 @@
                 </p>
                 <button>Unverbindliche Anfrage</button>
             </div>
-            <div class="header-element">
+            <div class="main-logo">
                 <img src="logo_garage.webp" alt="">
             </div>
 
-        </div>
-        <div class="main">
-            <div class="main-element">
+            <div class="main-training">
                 <h2>Training</h2>
                 <p>
                     Egal wie sportlich oder wie fit du bist, bei uns findest du deinen Platz um zu wachsen - physisch,
@@ -163,9 +257,13 @@
                     Belastungsfähigkeit zu verbessern. Wir trainieren in unserer Halle in der Deischgasse. Manchmal aber
                     auch outdoor.
                 </p>
+            </div>
+
+            <div class="main-halle">
                 <img src="garage_halle.webp" alt="">
             </div>
-            <div class="main-element">
+
+            <div class="main-zeit">
                 <h2>Kurszeiten</h2>
 
                 <h3>Gruppentraining</h3>
@@ -265,7 +363,13 @@
 
                 </p>
             </div>
-            <div class="main-element">
+
+            <div class="main-outdoor">
+                <img src="garage_outdoor.webp" alt="">
+            </div>
+
+            <div class="main-preis">
+
                 <h2>Preise</h2>
                 <h3>Gruppentraining</h3>
                 <ul>
@@ -287,13 +391,9 @@
                 <ul>
                     <li> 100€ / 60 Minuten</li>
                 </ul>
-
-
-
-
-                <img src="garage_outdoor.webp" alt="">
             </div>
         </div>
+
         <div>
             <img src="gruppe_outdoor.webp" alt="">
         </div>
@@ -331,13 +431,13 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
         <div class="footer">
             <div class="footer-element">
                 <h3>Anschrift</h3>
-                Die Garage Regensburg
-                Deischgasse 1
+                Die Garage Regensburg<br>
+                Deischgasse 1<br>
                 93047 Regensburg
 
                 <h3>Inhaber</h3>
-                Benjamin Bierl
-                Deischgasse 4
+                Benjamin Bierl<br>
+                Deischgasse 4<br>
                 93047 Regensburg
             </div>
             <div class="footer-element">
@@ -345,7 +445,7 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
                 bene.bierl@gmail.com
 
                 <h3>Instagram</h3>
-                @derfittebene
+                @derfittebene<br>
 
                 Die Garage Regensburg
 
