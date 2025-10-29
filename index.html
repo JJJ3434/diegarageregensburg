@@ -4,12 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Lebenslauf Johannes Janker</title>
+    <title>Die Garage Regensburg</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         .wrapper {
             max-width: 1300px;
             height: 1000px;
@@ -24,11 +20,16 @@
             color: #dddddd;
         }
 
+        a {
+            color: #dddddd;
+        }
+
         .wrapper {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
+
 
         .main {
             display: grid;
@@ -44,6 +45,7 @@
 
         .main>div:has(img) {
             border: none;
+            align-content: space-around;
         }
 
         .footer {
@@ -137,7 +139,7 @@
 
 
     <!-- 2 cols  -->
-    <style media="(min-width: 601px) and (max-width: 900px)">
+    <style media="(min-width: 601px) and (max-width: 930px)">
         .main {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -151,7 +153,7 @@
         .main-intro {
             grid-column: 2;
             grid-row: 1;
-            
+
         }
 
         .main-logo {
@@ -191,7 +193,7 @@
             grid-template-columns: 1fr;
         }
 
-        .main >div {
+        .main>div {
             grid-column: auto;
             grid-row: auto;
         }
@@ -212,18 +214,17 @@
             <div class="main-intro">
 
                 <p>
-                    Du hast Bock auf Training direkt um die Ecke in der Regensburger Altstadt? Angeleitet von
-                    sympathischen
-                    und top ausgebildetetn Coaches? Dann bist du bei uns richtig! Mein Name ist <em>Benjamin Bierl</em>
-                    und
-                    ich bin
-                    dein
+                    Du hast Bock auf Training direkt um die Ecke in der Regensburger Altstadt?<br>
+                    Angeleitet von sympathischen und top ausgebildetetn Coaches?<br>
+                    Dann bist du bei uns richtig!
                 </p>
                 <p>
-                    Coach im Altstadt-Gym <em>Die Garage</em>.
+                    Mein Name ist <em>Benjamin Bierl</em> und ich bin dein Coach im Altstadt-Gym <em>Die Garage</em>.
+                </p>
+                <p>
                     Ich biete derzeit angeleitetes <em>Gruppentraining</em> sowie <em>Personaltraining</em> in meinem
-                    Micro-Gym an. Auch <em>Open
-                        Gym</em> Zeiten werden angeboten. Die Kurse sind jeweils auf 10 Teilnehmer begrenzt.
+                    Micro-Gym an. Auch <em>Open Gym</em> Zeiten werden angeboten. Die Kurse sind jeweils auf 10
+                    Teilnehmer begrenzt.
                     Bei uns macht Training wieder Spaß!
                 </p>
                 <p>
@@ -403,6 +404,7 @@
             </div>
 
             <div class="contact-form">
+                <h2>Kontakt</h2>
 
                 <div class="contact-elment">Name</div>
                 <div class="contact-elment"><input></div>
@@ -423,34 +425,61 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
             </div>
 
         </div>
-
-        <div class="maps">
-            <img src="osm.webp" alt="">
+        <div id="maps-nojs">
+            <h2>Anfahrt</h2>
+            <a target="_blank"
+                href="https://www.openstreetmap.org/?mlat=49.017587&amp;mlon=12.093523#map=18/49.017587/12.093523">
+                <img src="map.png" alt="">
+            </a>
+            <br>
+            <small>
+                <a href="https://www.openstreetmap.org/?mlat=49.017587&amp;mlon=12.093523#map=18/49.017587/12.093523">
+                    ViewLarger Map
+                </a>
+            </small>
         </div>
+        <div id="map-container" style="visibility:collapse;">
+            <h2>Anfahrt</h2>
+            <iframe width="100%" height="370px"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=12.089043259620668%2C49.016042045531115%2C12.098001837730408%2C49.01913096545887&amp;layer=mapnik&amp;marker=49.017586529456096%2C12.093522548675537"></iframe>
+            <br>
+            <small>
+                <a href="https://www.openstreetmap.org/?mlat=49.017587&amp;mlon=12.093523#map=18/49.017587/12.093523">
+                    ViewLarger Map
+                </a>
+            </small>
+        </div>
+
+        <script>
+            document.getElementById("maps-nojs").style.visibility = 'collapse';
+            document.getElementById("map-container").style.visibility = 'visible';
+        </script>
 
         <div class="footer">
             <div class="footer-element">
-                <h3>Anschrift</h3>
+                <h2>Anschrift</h2>
                 Die Garage Regensburg<br>
                 Deischgasse 1<br>
                 93047 Regensburg
 
-                <h3>Inhaber</h3>
+                <h2>Inhaber</h2>
                 Benjamin Bierl<br>
                 Deischgasse 4<br>
                 93047 Regensburg
             </div>
             <div class="footer-element">
-                <h3>E-Mail</h3>
-                bene.bierl@gmail.com
+                <h2>E-Mail</h2>
 
-                <h3>Instagram</h3>
-                @derfittebene<br>
+                <a href="mailto:bene.bierl@gmail.com">bene.bierl@gmail.com</a>
 
-                Die Garage Regensburg
+                <h2>Instagram</h2>
+                <a href="https://www.instagram.com/diegarage_regensburgderfittebene/">@derfittebene</a><br>
+                <a href="https://www.instagram.com/diegarage_regensburg/">@diegarage_regensburg</a>
+
 
                 <h3>Telefon</h3>
-                +49 15158895108
+                <a href="tel:+4915158895108">+49 15158895108</a>
+                
             </div>
         </div>
         <div class="footer2">
