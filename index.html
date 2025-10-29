@@ -65,16 +65,36 @@
 
         .contact {
             display: grid;
+            grid-template-columns: 1fr 1fr;
         }
 
         .contact-form {
             grid-column: 1;
             grid-row: 1;
+            margin: 1em;
         }
 
         .contact-background {
-            grid-column: 1;
+            grid-column: 1/3;
             grid-row: 1;
+        }
+
+        .contact-form input {
+            width: 80%;
+        }
+
+        .contact-form label {
+            display: block;
+            background-color: black;
+            width: fit-content;
+            padding: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 15em;
         }
 
         img {
@@ -198,6 +218,14 @@
             grid-row: auto;
         }
     </style>
+
+    <style media="(prefers-color-scheme: dark)">
+        body {
+            background: black;
+            color: #dddddd;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -406,22 +434,22 @@
             <div class="contact-form">
                 <h2>Kontakt</h2>
 
-                <div class="contact-elment">Name</div>
-                <div class="contact-elment"><input></div>
-                <div class="contact-elment">EMail Adresse</div>
-                <div class="contact-elment"><input></div>
-                <div class="contact-elment">Nachricht</div>
-                <div class="contact-elment">
+                <label for="name">Name* :</label>
+                <input type="text" id="name" name="name" required minlength="1" />
 
-                    <textarea>Hallo Bene,
+                <label for="email">E-Mail Adresse* :</label>
+                <input type="email" id="email" name="email" required minlength="1" />
+
+
+                <label for="nachricht">Nachricht* :</label>
+                <textarea id="nachricht">Hallo Bene,
 ich möchte fitter werden und mich für ein unverbindliches Probetraining in der Garage anmelden!
 Übernächste Woche habe ich dafür
  - Monatag 06:00
  - Dienstag 10:00
  zeit. 
             </textarea>
-                </div>
-                <div class="contact-elment"><button>Absenden</button></div>
+                <div class="contact-element"><button>Absenden</button></div>
             </div>
 
         </div>
@@ -479,7 +507,7 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
 
                 <h3>Telefon</h3>
                 <a href="tel:+4915158895108">+49 15158895108</a>
-                
+
             </div>
         </div>
         <div class="footer2">
