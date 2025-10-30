@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Die Garage Regensburg</title>
     <style>
+        body {
+            font-family: Impact, Charcoal, sans-serif;
+        }
+
         .wrapper {
             max-width: 1300px;
             height: 1000px;
@@ -13,15 +17,19 @@
         }
 
         .wrapper>div {
-            border: 2px solid rgb(255, 255, 255);
+            border: 2px solid #f0f0f0;
             border-radius: 5px;
-            background-color: rgb(0, 0, 0);
+            background-color: black;
             padding: 1em;
-            color: #dddddd;
+            color: #f0f0f0;
+        }
+
+        button {
+            font-size: large;
         }
 
         a {
-            color: #dddddd;
+            color: #f0f0f0;
         }
 
         .wrapper {
@@ -39,7 +47,7 @@
         .main>div {
             padding: 15px;
             margin: 15px;
-            border: 2px solid white;
+            border: 2px solid #f0f0f0;
             border-radius: 5px;
         }
 
@@ -83,13 +91,15 @@
             width: 80%;
         }
 
-        .contact-form label {
+        .contact-form label,
+        h2 {
             display: block;
             background-color: black;
             width: fit-content;
-            padding: 5px;
-            margin-bottom: 5px;
-            margin-top: 5px;
+            padding: 3px;
+            margin-bottom: 7px;
+            margin-top: 7px;
+            opacity: 0.7;
         }
 
         textarea {
@@ -219,10 +229,33 @@
         }
     </style>
 
-    <style media="(prefers-color-scheme: dark)">
+    <style media="(prefers-color-scheme: light)">
         body {
-            background: black;
-            color: #dddddd;
+            background: #f0f0f0;
+            color: black;
+        }
+
+        .contact-form label,
+        h2 {
+            background-color: #f0f0f0;
+        }
+
+        .main>div {
+            border: 2px solid black;
+        }
+
+        .wrapper>div {
+            border: 2px solid black;
+            background-color: #f0f0f0;
+            color: black;
+        }
+
+        a {
+            color: black;
+        }
+
+        .main-logo>img {
+            filter: invert(100%);
         }
     </style>
 
@@ -258,7 +291,9 @@
                 <p>
                     Melde dich hier bei mir:
                 </p>
-                <button>Unverbindliche Anfrage</button>
+
+                <a href="#contact_id">Unverbindliche Anfrage</a>
+
             </div>
             <div class="main-logo">
                 <img src="logo_garage.webp" alt="">
@@ -432,7 +467,7 @@
             </div>
 
             <div class="contact-form">
-                <h2>Kontakt</h2>
+                <h2 id="contact_id">Kontakt</h2>
 
                 <label for="name">Name* :</label>
                 <input type="text" id="name" name="name" required minlength="1" />
