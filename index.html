@@ -4,11 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="dark">
     <title>Die Garage Regensburg</title>
     <style>
+        :root {
+            color-scheme: light dark;
+
+            --light-bg: ghostwhite;
+            --light-color: darkslategray;
+
+            --dark-bg: darkslategray;
+            --dark-color: ghostwhite;
+        }
+
         body {
-            font-family: Impact, Charcoal, sans-serif;
-            background-color: black;
+            background-color: light-dark(--light-bg, --dark-bg);
+            color: light-dark(--light-color, --dark-color);
         }
 
         .wrapper {
@@ -18,20 +29,17 @@
         }
 
         .wrapper>div {
-            border: 2px solid #f0f0f0;
+            border-width: 2px;
+            border-style: solid;
+            border-color: light-dark(--dark-color,--light-color);
             border-radius: 5px;
-            background-color: black;
             padding: 1em;
-            color: #f0f0f0;
         }
 
         button {
             font-size: large;
         }
 
-        a {
-            color: #f0f0f0;
-        }
 
         .wrapper {
             display: flex;
@@ -48,7 +56,9 @@
         .main>div {
             padding: 15px;
             margin: 15px;
-            border: 2px solid #f0f0f0;
+            border-width: 2px;
+            border-style: solid;
+            border-color: light-dark(--dark-color,--light-color);
             border-radius: 5px;
         }
 
@@ -61,15 +71,11 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
 
-        .footer-element {
-            width: 48%;
-        }
-
-        .footer2 {
-            display: flex;
-            flex-direction: row;
+        .footer a {
+            margin: 3px;
         }
 
         .contact {
@@ -81,10 +87,12 @@
             grid-column: 1;
             grid-row: 1;
             margin: 1em;
-            background-color: #0000007a;
+            background-color: light-dark(#f0f0f0bb,#0000007a);
             padding: 1em;
             border-radius: 5px;
         }
+        
+
 
         .contact-form * {
             width: 100%;
@@ -111,6 +119,7 @@
 
         img {
             width: 100%;
+            height: fit-content;
             border-radius: 5px;
         }
 
@@ -122,10 +131,6 @@
         .title {
             display: flex;
             justify-content: space-around;
-        }
-
-        .footer2-element {
-            margin: 10px;
         }
 
         .main-bene {
@@ -221,45 +226,15 @@
     <!-- 1 col  -->
     <style media="(max-width: 750px)">
         .main {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: block;
         }
 
-        .main>div {
-            grid-column: auto;
-            grid-row: auto;
-        }
-
-        .contact-form {
-            grid-column: 1/3;
-            grid-row: 2;
+        .contact {
+            display: block;
         }
     </style>
 
     <style media="(prefers-color-scheme: light)">
-        body {
-            background: #f0f0f0;
-            color: black;
-        }
-
-        .contact-form {
-            background-color: #f0f0f0bb;
-        }
-
-        .main>div {
-            border: 2px solid black;
-        }
-
-        .wrapper>div {
-            border: 2px solid black;
-            background-color: #f0f0f0;
-            color: black;
-        }
-
-        a {
-            color: black;
-        }
-
         .main-logo>img {
             filter: invert(100%);
         }
@@ -276,7 +251,8 @@
         <div class="main">
 
             <div class="main-bene">
-                <img src="bene_garage.webp" alt="">
+                <img src="bene_garage.webp" width="271" height="354"
+                    alt="Benjamin Bierl trainiert mit einer Kugelhantel in der alten Garage.">
             </div>
             <div class="main-intro">
 
@@ -488,8 +464,10 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
 Übernächste Woche habe ich dafür
  - Monatag 06:00
  - Dienstag 10:00
- zeit. 
-            </textarea>
+ zeit.
+
+Viele Grüße
+</textarea>
                 <div class="contact-element"><button>Absenden</button></div>
             </div>
 
@@ -525,7 +503,7 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
         </script>
 
         <div class="footer">
-            <div class="footer-element">
+            <div>
                 <h2>Anschrift</h2>
                 Die Garage Regensburg<br>
                 Deischgasse 1<br>
@@ -536,7 +514,7 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
                 Deischgasse 4<br>
                 93047 Regensburg
             </div>
-            <div class="footer-element">
+            <div>
                 <h2>E-Mail</h2>
 
                 <a href="mailto:bene.bierl@gmail.com">bene.bierl@gmail.com</a>
@@ -546,16 +524,16 @@ ich möchte fitter werden und mich für ein unverbindliches Probetraining in der
                 <a href="https://www.instagram.com/diegarage_regensburg/">@diegarage_regensburg</a>
 
 
-                <h3>Telefon</h3>
+                <h2>Telefon</h2>
                 <a href="tel:+4915158895108">+49 15158895108</a>
 
             </div>
         </div>
-        <div class="footer2">
-            <div class="footer2-element">Impressunm</div>
-            <div class="footer2-element">Datenschutz</div>
-            <div class="footer2-element">AGBs</div>
-            <div class="footer2-element">Startseite</div>
+        <div class="footer">
+            <a href="">Impressum</a>
+            <a href="">Datenschutz</a>
+            <a href="">AGBs</a>
+            <a href="">Startseite</a>
         </div>
     </div>
 </body>
