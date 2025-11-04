@@ -149,45 +149,11 @@ nav>a {
   margin: 5px;
 }
 
-.main-bene {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.main-intro {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.main-logo {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.main-training {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.main-halle {
-    grid-column: 2;
-    grid-row: 2;
-}
-
 .main-zeit {
     grid-column: 3;
     grid-row: 2/4;
 }
 
-.main-outdoor {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.main-preis {
-    grid-column: 2;
-    grid-row: 3;
-}
 
 @media (min-width: 751px) and (max-width: 930px) {
 
@@ -196,30 +162,9 @@ nav>a {
         grid-template-columns: 1fr 1fr;
     }
 
-    .main-bene {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .main-intro {
-        grid-column: 2;
-        grid-row: 1;
-
-    }
-
-    .main-logo {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
     .main-training {
         grid-column: 1;
         grid-row: 2;
-    }
-
-    .main-halle {
-        grid-column: 1;
-        grid-row: 3;
     }
 
     .main-zeit {
@@ -227,8 +172,8 @@ nav>a {
         grid-row: 3/5;
     }
 
-    .main-outdoor {
-        visibility: hidden;
+    #main-outdoor {
+        display: none;
     }
 
     .main-preis {
