@@ -13,13 +13,17 @@ body {
     color: light-dark(--light-color, --dark-color);
 }
 
-.wrapper {
+main {
     max-width: 1300px;
     height: 1000px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.wrapper>div {
+main>div,
+address {
     border-width: 2px;
     border-style: solid;
     border-color: light-dark(--dark-color, --light-color);
@@ -27,16 +31,29 @@ body {
     padding: 1em;
 }
 
+address {
+    font-style: normal;
+}
+
 button {
     font-size: large;
 }
 
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+td,
+th {
+    padding-right: 20px;
 }
+
+td:nth-last-of-type(1),
+th:nth-last-of-type(1) {
+    padding-right: 0px
+}
+
+table {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 
 .main {
@@ -56,6 +73,13 @@ button {
 .main>div:has(img) {
     border: none;
     align-content: space-around;
+}
+
+address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer {
@@ -122,6 +146,10 @@ em {
 .title {
     display: flex;
     justify-content: space-around;
+}
+
+nav>a {
+  margin: 5px;
 }
 
 .main-bene {

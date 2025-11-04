@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <main>
         <div class="title">
             <h1>Die Garage - Fitness in der Altstadt</h1>
         </div>
@@ -79,8 +79,6 @@
                 <h2>Kurszeiten</h2>
 
                 <h3>Gruppentraining</h3>
-
-
 
                 <details>
                     <summary>Montag: 5 Einheiten</summary>
@@ -192,23 +190,44 @@
                     <li><em>1 Monat Kündigungsfrist</em> </li>
                 </ul>
 
-                <ul>
-                    <li>9 x / Monat: 89 € pro Monat</li>
-                    <li>13x / Monat: 115 € pro Monat</li>
-                    <li>30x / Monat: 149 € pro Monat</li>
-                    <li> 10er-Karte: 150€</li>
-                    <li>Drop in: 20 €</li>
-                </ul>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Einheiten</th>
+                            <th scope="col">Preis</th>
+                        </tr>
+                        <tr>
+                            <td>9 / Monat</td>
+                            <td>89 € / Monat</td>
+                        </tr>
+                        <tr>
+                            <td>13 / Monat</td>
+                            <td>115 € / Monat</td>
+                        </tr>
+                        <tr>
+                            <td>30 / Monat</td>
+                            <td>149 € / Monat</td>
+                        </tr>
+                        <tr>
+                            <td>10er Karte</td>
+                            <td>150 €</td>
+                        </tr>
+                        <tr>
+                            <td>Drop in</td>
+                            <td>20 €</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <h3>Personal Coaching</h3>
-                <ul>
-                    <li> 100€ / 60 Minuten</li>
-                </ul>
+                Privates Einzeltraining für 100€ pro Trainingseinheit (60 Minuten).
+
             </div>
         </div>
 
         <div>
             <img src="gruppe_outdoor.webp" alt="">
         </div>
+
         <div class="contact">
             <div class="contact-background">
                 <img src="bene_full.webp" alt="">
@@ -225,7 +244,7 @@
 
 
                 <label for="nachricht">Nachricht* :</label>
-                <textarea id="nachricht">Hallo Bene,
+                <textarea autocorrect="off" id="nachricht">Hallo Bene,
 ich möchte fitter werden und mich für ein unverbindliches Probetraining in der Garage anmelden!
 Übernächste Woche habe ich dafür
  - Monatag 06:00
@@ -238,6 +257,7 @@ Viele Grüße
             </div>
 
         </div>
+
         <div id="maps-nojs">
             <h2>Anfahrt</h2>
             <a target="_blank"
@@ -251,6 +271,7 @@ Viele Grüße
                 </a>
             </small>
         </div>
+
         <div id="map-container" style="visibility:collapse;">
             <h2>Anfahrt</h2>
             <iframe width="100%" height="370px"
@@ -268,40 +289,44 @@ Viele Grüße
             document.getElementById("map-container").style.visibility = 'visible';
         </script>
 
-        <div class="footer">
-            <div>
-                <h2>Anschrift</h2>
-                Die Garage Regensburg<br>
-                Deischgasse 1<br>
-                93047 Regensburg
+        <footer>
 
-                <h2>Inhaber</h2>
-                Benjamin Bierl<br>
-                Deischgasse 4<br>
-                93047 Regensburg
-            </div>
-            <div>
-                <h2>E-Mail</h2>
+            <address>
+                <div>
+                    <h2>Anschrift</h2>
+                    Die Garage Regensburg<br>
+                    Deischgasse 1<br>
+                    93047 Regensburg
 
-                <a href="mailto:bene.bierl@gmail.com">bene.bierl@gmail.com</a>
+                    <h2>Inhaber</h2>
+                    Benjamin Bierl<br>
+                    Deischgasse 4<br>
+                    93047 Regensburg
+                </div>
+                <div>
+                    <h2>E-Mail</h2>
 
-                <h2>Instagram</h2>
-                <a href="https://www.instagram.com/diegarage_regensburgderfittebene/">@derfittebene</a><br>
-                <a href="https://www.instagram.com/diegarage_regensburg/">@diegarage_regensburg</a>
+                    <a href="mailto:bene.bierl@gmail.com">bene.bierl@gmail.com</a>
+
+                    <h2>Instagram</h2>
+                    <a href="https://www.instagram.com/diegarage_regensburgderfittebene/">@derfittebene</a><br>
+                    <a href="https://www.instagram.com/diegarage_regensburg/">@diegarage_regensburg</a>
 
 
-                <h2>Telefon</h2>
-                <a href="tel:+4915158895108">+49 15158895108</a>
+                    <h2>Telefon</h2>
+                    <a href="tel:+4915158895108">+49 15158895108</a>
 
-            </div>
-        </div>
-        <div class="footer">
-            <a href="">Impressum</a>
-            <a href="">Datenschutz</a>
-            <a href="">AGBs</a>
-            <a href="">Startseite</a>
-        </div>
-    </div>
+                </div>
+            </address>
+            <nav>
+                <a href="">Impressum</a>
+                <a href="">Datenschutz</a>
+                <a href="">AGBs</a>
+                <a href="">Startseite</a>
+            </nav>
+        </footer>
+
+    </main>
 </body>
 
 
