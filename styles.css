@@ -33,9 +33,24 @@ address {
     padding: 1em;
 }
 
-button {
-    font-size: large;
+
+#main-intro>a {
+    padding: 10px 20px;
 }
+button, #main-intro>a {
+    font-size: large;
+    background-color: hsl(216, 100%, 50%);
+    color: var(--dark-color);
+    height: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+button:hover {
+    background-color: hsl(216, 100%, 40%);
+}
+
 
 /* table with prices */
 table {
@@ -153,7 +168,7 @@ nav>a {
     grid-row: 5;
 }
 
-
+/* 2 col layout medium scree size */
 @media (min-width: 751px) and (max-width: 930px) {
 
     /* grid layout */
@@ -187,6 +202,7 @@ nav>a {
     }
 }
 
+/* single col layout - mobile */
 @media (max-width: 750px) {
     .main {
         display: flex;
@@ -208,7 +224,6 @@ nav>a {
         margin: 0;
     }
 }
-
 
 @media (prefers-color-scheme: light) {
     #main-logo>img {
