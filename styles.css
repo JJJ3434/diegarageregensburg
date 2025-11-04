@@ -8,10 +8,16 @@
     --dark-color: ghostwhite;
 }
 
-body *{
+body * {
     background-color: light-dark(--light-bg, --dark-bg);
     color: light-dark(--light-color, --dark-color);
     font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+
 }
 
 main {
@@ -39,6 +45,7 @@ table {
     display: flex;
     justify-content: space-around;
 }
+
 /* padding only inside table */
 td,
 th {
@@ -54,11 +61,13 @@ th:nth-last-of-type(1) {
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border: none;
+    gap:10px
+
 }
 
 .main>div {
     padding: 15px;
-    margin: 15px;
     border-width: 2px;
     border-style: solid;
     border-color: light-dark(--dark-color, --light-color);
@@ -131,7 +140,7 @@ em {
 }
 
 nav>a {
-  margin: 5px;
+    margin: 5px;
 }
 
 #main-zeit {
@@ -172,8 +181,21 @@ nav>a {
         display: block;
     }
 
+    .main>div {
+        margin: 0;
+    }
+
+    .main>div:has(img) {
+        padding: 0 10%;
+    }
+
     .contact {
         display: block;
+    }
+
+    .contact-form {
+        margin: 15px 0 0 0;
+
     }
 }
 
