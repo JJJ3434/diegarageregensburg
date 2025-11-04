@@ -8,9 +8,10 @@
     --dark-color: ghostwhite;
 }
 
-body {
+body *{
     background-color: light-dark(--light-bg, --dark-bg);
     color: light-dark(--light-color, --dark-color);
+    font-style: normal;
 }
 
 main {
@@ -29,10 +30,6 @@ address {
     border-color: light-dark(--dark-color, --light-color);
     border-radius: 5px;
     padding: 1em;
-}
-
-address {
-    font-style: normal;
 }
 
 button {

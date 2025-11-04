@@ -258,25 +258,16 @@ Viele Grüße
 
         </div>
 
-        <div id="maps-nojs">
+        <div>
             <h2>Anfahrt</h2>
-            <a target="_blank"
+            <a id="maps-nojs" target="_blank"
                 href="https://www.openstreetmap.org/?mlat=49.017587&amp;mlon=12.093523#map=18/49.017587/12.093523">
                 <img src="map.png" alt="">
             </a>
-            <br>
-            <small>
-                <a href="https://www.openstreetmap.org/?mlat=49.017587&amp;mlon=12.093523#map=18/49.017587/12.093523">
-                    ViewLarger Map
-                </a>
-            </small>
-        </div>
 
-        <div id="map-container" style="visibility:collapse;">
-            <h2>Anfahrt</h2>
-            <iframe width="100%" height="370px"
+            <iframe id="map-container" width="100%" height="370px" style="display: none;"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=12.089043259620668%2C49.016042045531115%2C12.098001837730408%2C49.01913096545887&amp;layer=mapnik&amp;marker=49.017586529456096%2C12.093522548675537"></iframe>
-            <br>
+
             <small>
                 <a href="https://www.openstreetmap.org/?mlat=49.017587&amp;mlon=12.093523#map=18/49.017587/12.093523">
                     ViewLarger Map
@@ -285,8 +276,8 @@ Viele Grüße
         </div>
 
         <script>
-            document.getElementById("maps-nojs").style.visibility = 'collapse';
-            document.getElementById("map-container").style.visibility = 'visible';
+            document.getElementById("maps-nojs").style.display = 'none';
+            document.getElementById("map-container").style.display = 'block';
         </script>
 
         <footer>
