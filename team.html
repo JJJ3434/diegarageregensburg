@@ -4,60 +4,168 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="img/icon.png"> 
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="icon" href="img/icon.png">
     <title>Die Garage Regensburg</title>
+
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        figure {
+            width: 100%;
+            max-width: 400px;
+            margin: 0;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .coach {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        @media (min-width: 751px) {
+            .coach {
+                flex-direction: row;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <main>
 
-            <div id="title">
-                <h1>Die Garage - Fitness in der Altstadt</h1>
-            </div>
+        <div id="title">
+            <h1>Coaches in der Garage</h1>
+        </div>
+
+        <div class="coaches">
+
             <div class="coach">
-                <h2>Benjamin (Bene) Bierl</h2>
+                <div class="center">
+                    <figure>
+                        <img src="img/trainier_placeholder.webp" width="800" height="800" alt="">
+                        <figcaption>Bene beim trainieren mit der Kugelhantel</figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <h2>Benjamin (Bene) Bierl</h2>
+                    <p>Bene biographie
+
+                    </p>
+                    <p>
+                        sport studium
+                        gründer der garage etc
+                        gründer der garage etc
+                        gründer der garage etc
+                        gründer der garage etc
+                    </p>
+                </div>
             </div>
+        </div>
+                <div class="coaches">
+
+            <div class="coach">
+                <div class="center">
+                    <figure>
+                        <img src="img/trainier_placeholder.webp" width="800" height="800" alt="">
+                        <figcaption>Bene beim trainieren mit der Kugelhantel</figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <h2>Benjamin (Bene) Bierl</h2>
+                    <p>Bene biographie
+
+                    </p>
+                    <p>
+                        sport studium
+                        gründer der garage etc
+                        gründer der garage etc
+                        gründer der garage etc
+                        gründer der garage etc
+                    </p>
+                </div>
+            </div>
+        </div>
+                <div class="coaches">
+
+            <div class="coach">
+                <div class="center">
+                    <figure>
+                        <img src="img/trainier_placeholder.webp" width="800" height="800" alt="">
+                        <figcaption>Bene beim trainieren mit der Kugelhantel</figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <h2>Benjamin (Bene) Bierl</h2>
+                    <p>Bene biographie
+
+                    </p>
+                    <p>
+                        sport studium
+                        gründer der garage etc
+                        gründer der garage etc
+                        gründer der garage etc
+                        gründer der garage etc
+                    </p>
+                </div>
+            </div>
+        </div>
 
     </main>
 
-        <footer>
+    <footer>
 
-            <address>
-                <div>
-                    <h2>Anschrift</h2>
-                    Die Garage Regensburg<br>
-                    Deischgasse 1<br>
-                    93047 Regensburg
+        <address>
+            <div>
+                <h2>Anschrift</h2>
+                Die Garage Regensburg<br>
+                Deischgasse 1<br>
+                93047 Regensburg
 
-                    <h2>Inhaber</h2>
-                    Benjamin Bierl<br>
-                    Deischgasse 4<br>
-                    93047 Regensburg
-                </div>
-                <div>
-                    <h2>E-Mail</h2>
+                <h2>Inhaber</h2>
+                Benjamin Bierl<br>
+                Deischgasse 4<br>
+                93047 Regensburg
+            </div>
+            <div>
+                <h2>E-Mail</h2>
 
-                    <a href="mailto:bene.bierl@gmail.com">bene.bierl@gmail.com</a>
+                <a href="mailto:bene.bierl@gmail.com">bene.bierl@gmail.com</a>
 
-                    <h2>Instagram</h2>
-                    <a href="https://www.instagram.com/diegarage_regensburgderfittebene/">@derfittebene</a><br>
-                    <a href="https://www.instagram.com/diegarage_regensburg/">@diegarage_regensburg</a>
+                <h2>Instagram</h2>
+                <a href="https://www.instagram.com/diegarage_regensburgderfittebene/">@derfittebene</a><br>
+                <a href="https://www.instagram.com/diegarage_regensburg/">@diegarage_regensburg</a>
 
 
-                    <h2>Telefon</h2>
-                    <a href="tel:+4915158895108">+49 15158895108</a>
+                <h2>Telefon</h2>
+                <a href="tel:+4915158895108">+49 15158895108</a>
 
-                </div>
-            </address>
-            <nav>
-                <a href="/Team">Team</a>
-                <a href="/Impressum">Impressum</a>
-                <a href="/Datenschutz">Datenschutz</a>
-                <a href="/AGB">AGBs</a>
-                <a href="/">Startseite</a>
-            </nav>
-        </footer>
+            </div>
+        </address>
+        <nav>
+            <a href="/Team">Team</a>
+            <a href="/Impressum">Impressum</a>
+            <a href="/Datenschutz">Datenschutz</a>
+            <a href="/AGB">AGBs</a>
+            <a href="/">Startseite</a>
+        </nav>
+    </footer>
 
 </body>
 

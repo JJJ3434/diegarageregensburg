@@ -10,10 +10,21 @@
 
 
 .coach {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    gap: 10px;
 }
+
+.coach img {
+    width: 400px;
+}
+
+
+.coaches {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 
 body * {
     font-style: normal;
@@ -46,7 +57,8 @@ address {
     justify-content: space-around;
 }
 
-button, #contact_link {
+button,
+#contact_link {
     font-size: large;
     background-color: hsl(216, 100%, 50%);
     color: var(--dark-color);
@@ -57,7 +69,8 @@ button, #contact_link {
     text-align: center;
 }
 
-button:hover, #contact_link:hover{
+button:hover,
+#contact_link:hover {
     background-color: hsl(216, 100%, 40%);
 }
 
@@ -81,7 +94,7 @@ th:nth-last-of-type(1) {
     gap: 10px
 }
 
-.main>div {
+.main, .card {
     padding: 15px;
     border-width: 2px;
     border-style: solid;
@@ -158,7 +171,7 @@ em {
     justify-content: space-around;
 }
 
-nav>a {
+a {
     margin: 5px;
 }
 
@@ -187,6 +200,7 @@ nav>a {
         grid-row: 1;
         grid-column: 1/3;
     }
+
     #main-training {
         grid-column: 1;
         grid-row: 3;
@@ -232,6 +246,18 @@ nav>a {
 
     .contact-form {
         margin: 0;
+    }
+
+
+
+    .coach {
+        flex-direction: column;
+        align-items: center;
+        max-width: 250px;
+    }
+
+    .coach img {
+        width: 80%;
     }
 }
 
