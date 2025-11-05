@@ -33,29 +33,23 @@ address {
     padding: 1em;
 }
 
-
-#main-intro>a {
-    padding: 10px 20px;
+.center {
+    display: flex;
+    justify-content: space-around;
 }
-button, #main-intro>a {
+
+button, #contact_link {
     font-size: large;
     background-color: hsl(216, 100%, 50%);
     color: var(--dark-color);
-    height: 40px;
+    padding: 10px 40px;
     font-weight: bold;
     border-radius: 10px;
     border-width: 0;
 }
 
-button:hover {
+button:hover, #contact_link:hover{
     background-color: hsl(216, 100%, 40%);
-}
-
-
-/* table with prices */
-table {
-    display: flex;
-    justify-content: space-around;
 }
 
 /* padding only inside table */
