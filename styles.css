@@ -8,6 +8,13 @@
     --dark-color: ghostwhite;
 }
 
+
+.coach {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+}
+
 body * {
     font-style: normal;
 }
@@ -15,6 +22,7 @@ body * {
 body {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 main {
