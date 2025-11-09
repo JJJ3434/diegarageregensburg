@@ -2,7 +2,7 @@
 
 julia_version = "1.12.1"
 manifest_format = "2.0"
-project_hash = "a226565e03109d49cb2a252bf3efbb2e49c692e7"
+project_hash = "d165bd432a6d383d759510f285ceee0d7d76c900"
 
 [[deps.ArgParse]]
 deps = ["Logging", "TextWrap"]
@@ -369,6 +369,12 @@ version = "1.18.0+0"
 deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 version = "1.12.0"
+
+[[deps.LiveServer]]
+deps = ["HTTP", "LoggingExtras", "MIMEs", "Sockets", "Test"]
+git-tree-sha1 = "9f65b8a9989e6acb6e216785dd0c748d9569fc9b"
+uuid = "16fef848-5104-11e9-1b77-fb7a48bbb589"
+version = "1.5.0"
 
 [[deps.Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
