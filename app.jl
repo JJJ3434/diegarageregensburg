@@ -1,7 +1,12 @@
+module App
+
 using Genie, Genie.Renderer.Html, Genie.Requests
 import Genie.Renderer.Html: div, summary
-include("translations.jl")
-include("class_schedule.jl")
+include("lib/translations.jl")
+include("lib/class_schedule.jl")
+include("lib/intro.jl")
+using Intro
+
 route("/message") do
     name = "John"
     h1("Welcome to Genie $name !")
@@ -83,18 +88,11 @@ route("/:lang") do
         body([
             h1(translations[:diegarage][payload(:lang)])
             hr()
-            translations[:intro][payload(:lang)]
+            Intro.intro()
             hr()
             translations[:training][payload(:lang)]
             hr()
-            h2(translations[:class_schedule][payload(:lang)])
-            h3(translations[:group_classes][payload(:lang)])
-            class_schedule() 
-            h3("Open Gym")
-            h3("Yoga Power")
-            h3("Outdoor Training")
-            p(translations[:outdoor_training][payload(:lang)])
-            p(translations[:flex_course_time][payload(:lang)])
+            class_schedule()
             hr()
             footer([address(
                     [
@@ -133,4 +131,6 @@ route("/:lang") do
                     a(href="/", "Startseite")])
             ])
         ])]
+end
+
 end

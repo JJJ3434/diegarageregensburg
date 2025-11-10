@@ -1,4 +1,6 @@
 class_schedule() = [
+    h2(translations[:class_schedule][payload(:lang)])
+    h3(translations[:group_classes][payload(:lang)])
     details(
         [summary([
                 translations[:monday][payload(:lang)]
@@ -92,4 +94,8 @@ class_schedule() = [
             ])
         ]
     )
-]
+    h3("Open Gym")
+    h3("Yoga Power")
+    h3("Outdoor Training")
+    p(translations[:outdoor_training][payload(:lang)])
+    p(translations[:flex_course_time][payload(:lang)])]
