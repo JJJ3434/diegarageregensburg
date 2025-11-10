@@ -1,7 +1,7 @@
 using Genie, Genie.Renderer.Html, Genie.Requests
-
+import Genie.Renderer.Html: div, summary
 include("translations.jl")
-
+include("class_schedule.jl")
 route("/message") do
     name = "John"
     h1("Welcome to Genie $name !")
@@ -73,52 +73,64 @@ end
 
 
 route("/:lang") do
-    head([
-        meta(charset="utf-8")
-        meta(name="og:image", content="/img/meta.png")
-        link(rel="stylesheet", href=("/style.css"))
-        link(rel="icon", href="/favicon.svg", sizes="any", type="image/svg+xml")
-        title("Including assets")
-    ])
-    body([
-        translations[:intro][payload(:lang)]
-        translations[:training][payload(:lang)]
-        footer([address(
-                [
-                    Html.div([
-                        h2(translations[:adress][payload(:lang)])
-                        "Die Garage Regensburg"
-                        br()
-                        "Deischgasse 1"
-                        br()
-                        "93047 Regensburg"
-                    ])
-                    Html.div([
-                        h2(translations[:owner][payload(:lang)])
-                        "Benjamin Bierl"
-                        br()
-                        "Deischgasse 1"
-                        br()
-                        "93047 Regensburg"
-                    ])
-                    Html.div([
-                        h2("E-Mail")
-                        a(href="mailto:bene.bierl@gmail.com", "bene.bierl@gmail.com")
-                        h2("Instagram")
-                        a(href="https://www.instagram.com/derfittebene/", "@derfittebene")
-                        br()
-                        a(href="https://www.instagram.com/diegarage_regensburg/", "@diegarage_regensburg")
-                        h2(translations[:phone][payload(:lang)])
-                        a(href="tel:+4915158895108", "+49 151 5889 5108")
-                    ])]
-            )
-            nav([
-                a(href="/Team", "Team")
-                a(href="/Impressum", "Impressum")
-                a(href="/Datenschutz", "Datenschutz")
-                a(href="/AGB", "AGBs")
-                a(href="/", "Startseite")])
+    [head([
+            meta(charset="utf-8")
+            meta(name="og:image", content="/img/meta.png")
+            link(rel="stylesheet", href=("/style.css"))
+            link(rel="icon", href="/favicon.svg", sizes="any", type="image/svg+xml")
+            title("Including assets")
         ])
-    ])
-
+        body([
+            h1(translations[:diegarage][payload(:lang)])
+            hr()
+            translations[:intro][payload(:lang)]
+            hr()
+            translations[:training][payload(:lang)]
+            hr()
+            h2(translations[:class_schedule][payload(:lang)])
+            h3(translations[:group_classes][payload(:lang)])
+            class_schedule() 
+            h3("Open Gym")
+            h3("Yoga Power")
+            h3("Outdoor Training")
+            p(translations[:outdoor_training][payload(:lang)])
+            p(translations[:flex_course_time][payload(:lang)])
+            hr()
+            footer([address(
+                    [
+                        Html.div([
+                            h2(translations[:adress][payload(:lang)])
+                            "Die Garage Regensburg"
+                            br()
+                            "Deischgasse 1"
+                            br()
+                            "93047 Regensburg"
+                        ])
+                        Html.div([
+                            h2(translations[:owner][payload(:lang)])
+                            "Benjamin Bierl"
+                            br()
+                            "Deischgasse 1"
+                            br()
+                            "93047 Regensburg"
+                        ])
+                        Html.div([
+                            h2("E-Mail")
+                            a(href="mailto:bene.bierl@gmail.com", "bene.bierl@gmail.com")
+                            h2("Instagram")
+                            a(href="https://www.instagram.com/derfittebene/", "@derfittebene")
+                            br()
+                            a(href="https://www.instagram.com/diegarage_regensburg/", "@diegarage_regensburg")
+                            h2(translations[:phone][payload(:lang)])
+                            a(href="tel:+4915158895108", "+49 151 5889 5108")
+                        ])]
+                )
+                nav([
+                    a(href="/Team", "Team")
+                    a(href="/Impressum", "Impressum")
+                    a(href="/Datenschutz", "Datenschutz")
+                    a(href="/AGB", "AGBs")
+                    a(href="/", "Startseite")])
+            ])
+        ])]
 end
